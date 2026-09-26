@@ -1,0 +1,28 @@
+# Build output
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Logs
+**/logs/
+
+# Environment files (secrets go in Render's env vars, not the image)
+.env
+.env.*
+!.env.example
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# OS
+Thumbs.db
+.DS_Store

@@ -4,6 +4,11 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
 
+// Render injects a PORT env var at runtime. Override Kestrel's URL so the
+// container actually listens on that port regardless of appsettings.json.
+var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+Environment.SetEnvironmentVariable("ASPNETCORE_URLS", $"http://+:{port}");
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Load .env file
@@ -186,20 +191,23 @@ builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// Enable Swagger in all environments so the deployed API is easy to verify
+app.UseSwagger();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "ZAH Seller AI API v1");
+    options.RoutePrefix = string.Empty; // Serve Swagger UI at root
+});
+
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "ZAH Seller AI API v1");
-        options.RoutePrefix = string.Empty; // Serve Swagger UI at root
-    });
+    // Development-only middleware can go here
 }
 
 app.UseSerilogRequestLogging();
 
-app.UseHttpsRedirection();
+// HTTPS redirect is intentionally omitted: Render terminates TLS at the edge
+// and forwards plain HTTP internally. Redirecting here would cause a redirect loop.
 
 app.UseStaticFiles();
 

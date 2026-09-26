@@ -24,3 +24,29 @@
 2026-09-27 01:57:45.770 +05:30 [INF] HTTP POST /api/v1/products/6ab82ac0f95b4c69ddbc0c22/publish responded 200 in 152.8225 ms
 2026-09-27 01:59:01.438 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.4509 ms
 2026-09-27 01:59:02.033 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 587.0212 ms
+2026-09-27 02:20:58.474 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-27 02:20:58.786 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-27 02:20:58.797 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 02:20:58.801 +05:30 [INF] Hosting environment: Production
+2026-09-27 02:20:58.805 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\src\API
+2026-09-27 02:23:07.479 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 02:23:07.760 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 287.2630 ms
+2026-09-27 02:23:12.599 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 4400.7340 ms
+2026-09-27 02:24:08.322 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab830ed1d93a208b7a0592f responded 204 in 1.4202 ms
+2026-09-27 02:24:08.890 +05:30 [INF] HTTP PUT /api/v1/products/6ab830ed1d93a208b7a0592f responded 404 in 554.4832 ms
+2026-09-27 02:24:08.906 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1080 ms
+2026-09-27 02:24:09.224 +05:30 [INF] Product draft created: 6ab830f0e960656b76dd983a for seller: 65f1a2b3c4d5e6f7a8b9c0f1
+2026-09-27 02:24:09.234 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 320.4449 ms
+2026-09-27 02:24:09.244 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab830f0e960656b76dd983a responded 204 in 0.1208 ms
+2026-09-27 02:24:09.463 +05:30 [INF] Product updated: 6ab830f0e960656b76dd983a
+2026-09-27 02:24:09.506 +05:30 [INF] HTTP PUT /api/v1/products/6ab830f0e960656b76dd983a responded 200 in 255.3028 ms
+2026-09-27 02:24:09.700 +05:30 [INF] Product updated: 6ab830f0e960656b76dd983a
+2026-09-27 02:24:09.703 +05:30 [INF] HTTP PUT /api/v1/products/6ab830f0e960656b76dd983a responded 200 in 187.1344 ms
+2026-09-27 02:24:09.711 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab830f0e960656b76dd983a/publish responded 204 in 0.1022 ms
+2026-09-27 02:24:09.866 +05:30 [INF] Product published: 6ab830f0e960656b76dd983a
+2026-09-27 02:24:09.873 +05:30 [INF] HTTP POST /api/v1/products/6ab830f0e960656b76dd983a/publish responded 200 in 153.6630 ms
+2026-09-27 02:24:22.271 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.2137 ms
+2026-09-27 02:24:22.747 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 464.0618 ms
+2026-09-27 02:24:39.386 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1243 ms
+2026-09-27 02:24:39.864 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 464.2895 ms
+2026-09-27 02:25:58.592 +05:30 [INF] Application is shutting down...
