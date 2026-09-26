@@ -1,0 +1,218 @@
+2026-09-06 15:03:40.668 +05:30 [INF] Application is shutting down...
+2026-09-06 15:03:58.427 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-06 15:03:58.614 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-06 15:03:58.622 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-06 15:03:58.624 +05:30 [INF] Hosting environment: Production
+2026-09-06 15:03:58.626 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-06 15:04:19.404 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-06 15:04:19.431 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 29.1837 ms
+2026-09-06 15:04:19.672 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 197.3946 ms
+2026-09-06 15:04:19.694 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 0.9568 ms
+2026-09-06 15:04:25.911 +05:30 [INF] HTTP POST /api/v1/auth/refresh responded 200 in 6205.5141 ms
+2026-09-06 15:04:25.922 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1774 ms
+2026-09-06 15:04:26.036 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 105.0915 ms
+2026-09-06 15:05:27.212 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d33d4ba6aac6529e5c1ec responded 204 in 0.1603 ms
+2026-09-06 15:05:27.472 +05:30 [INF] HTTP PUT /api/v1/products/6a9d33d4ba6aac6529e5c1ec responded 404 in 249.1953 ms
+2026-09-06 15:05:27.491 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1238 ms
+2026-09-06 15:05:27.601 +05:30 [INF] Product draft created: 6a9d33df0c095eb201749e5a for seller: dev-seller-1
+2026-09-06 15:05:27.612 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 113.8784 ms
+2026-09-06 15:05:27.645 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d33df0c095eb201749e5a responded 204 in 0.1065 ms
+2026-09-06 15:05:27.678 +05:30 [INF] Product updated: 6a9d33df0c095eb201749e5a
+2026-09-06 15:05:27.739 +05:30 [INF] HTTP PUT /api/v1/products/6a9d33df0c095eb201749e5a responded 200 in 83.6976 ms
+2026-09-06 15:05:27.759 +05:30 [INF] Product updated: 6a9d33df0c095eb201749e5a
+2026-09-06 15:05:27.763 +05:30 [INF] HTTP PUT /api/v1/products/6a9d33df0c095eb201749e5a responded 200 in 10.2233 ms
+2026-09-06 15:05:27.776 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d33df0c095eb201749e5a/publish responded 204 in 0.1035 ms
+2026-09-06 15:05:27.806 +05:30 [INF] Product published: 6a9d33df0c095eb201749e5a
+2026-09-06 15:05:27.813 +05:30 [INF] HTTP POST /api/v1/products/6a9d33df0c095eb201749e5a/publish responded 200 in 26.7236 ms
+2026-09-06 15:22:17.532 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 28.0712 ms
+2026-09-06 15:22:17.817 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 203.6721 ms
+2026-09-06 15:23:10.044 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d37fd3e1f1a9976f4af8c responded 204 in 0.8532 ms
+2026-09-06 15:23:10.103 +05:30 [INF] HTTP PUT /api/v1/products/6a9d37fd3e1f1a9976f4af8c responded 404 in 49.4367 ms
+2026-09-06 15:23:10.120 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1581 ms
+2026-09-06 15:23:10.561 +05:30 [INF] Product draft created: 6a9d38060c095eb201749e5e for seller: dev-seller-1
+2026-09-06 15:23:10.566 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 436.0485 ms
+2026-09-06 15:23:10.581 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d38060c095eb201749e5e responded 204 in 0.0861 ms
+2026-09-06 15:23:10.602 +05:30 [INF] Product updated: 6a9d38060c095eb201749e5e
+2026-09-06 15:23:10.609 +05:30 [INF] HTTP PUT /api/v1/products/6a9d38060c095eb201749e5e responded 200 in 15.8086 ms
+2026-09-06 15:23:10.629 +05:30 [INF] Product updated: 6a9d38060c095eb201749e5e
+2026-09-06 15:23:10.634 +05:30 [INF] HTTP PUT /api/v1/products/6a9d38060c095eb201749e5e responded 200 in 11.4057 ms
+2026-09-06 15:23:10.646 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d38060c095eb201749e5e/publish responded 204 in 0.1060 ms
+2026-09-06 15:23:10.660 +05:30 [INF] Product published: 6a9d38060c095eb201749e5e
+2026-09-06 15:23:10.672 +05:30 [INF] HTTP POST /api/v1/products/6a9d38060c095eb201749e5e/publish responded 200 in 18.7342 ms
+2026-09-06 15:25:14.157 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d387e1d2f43e748ef4394 responded 204 in 2.3555 ms
+2026-09-06 15:25:14.191 +05:30 [INF] HTTP PUT /api/v1/products/6a9d387e1d2f43e748ef4394 responded 404 in 11.5844 ms
+2026-09-06 15:25:14.223 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1208 ms
+2026-09-06 15:25:14.242 +05:30 [INF] Product draft created: 6a9d38820c095eb201749e62 for seller: dev-seller-1
+2026-09-06 15:25:14.250 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 14.3995 ms
+2026-09-06 15:25:14.277 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d38820c095eb201749e62 responded 204 in 0.1590 ms
+2026-09-06 15:25:14.298 +05:30 [INF] Product updated: 6a9d38820c095eb201749e62
+2026-09-06 15:25:14.302 +05:30 [INF] HTTP PUT /api/v1/products/6a9d38820c095eb201749e62 responded 200 in 12.4762 ms
+2026-09-06 15:25:14.327 +05:30 [INF] Product updated: 6a9d38820c095eb201749e62
+2026-09-06 15:25:14.334 +05:30 [INF] HTTP PUT /api/v1/products/6a9d38820c095eb201749e62 responded 200 in 13.7555 ms
+2026-09-06 15:25:14.349 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d38820c095eb201749e62/publish responded 204 in 0.1137 ms
+2026-09-06 15:25:14.365 +05:30 [INF] Product published: 6a9d38820c095eb201749e62
+2026-09-06 15:25:14.368 +05:30 [INF] HTTP POST /api/v1/products/6a9d38820c095eb201749e62/publish responded 200 in 10.9794 ms
+2026-09-06 15:29:30.169 +05:30 [INF] Application is shutting down...
+2026-09-06 15:30:07.120 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-06 15:30:07.431 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-06 15:30:07.445 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-06 15:30:07.449 +05:30 [INF] Hosting environment: Production
+2026-09-06 15:30:07.451 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-06 15:31:59.857 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-06 15:31:59.886 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 29.6266 ms
+2026-09-06 15:32:02.867 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 2931.2622 ms
+2026-09-06 15:33:01.336 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3a514aec93d60f3ca352 responded 204 in 1.5247 ms
+2026-09-06 15:33:01.792 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3a514aec93d60f3ca352 responded 404 in 436.6497 ms
+2026-09-06 15:33:01.815 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1847 ms
+2026-09-06 15:33:02.005 +05:30 [INF] Product draft created: 6a9d3a5512689966e79b1729 for seller: dev-seller-1
+2026-09-06 15:33:02.023 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 198.7267 ms
+2026-09-06 15:33:02.049 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3a5512689966e79b1729 responded 204 in 0.2937 ms
+2026-09-06 15:33:02.103 +05:30 [INF] Product updated: 6a9d3a5512689966e79b1729
+2026-09-06 15:33:02.189 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3a5512689966e79b1729 responded 200 in 128.7132 ms
+2026-09-06 15:33:02.212 +05:30 [INF] Product updated: 6a9d3a5512689966e79b1729
+2026-09-06 15:33:02.217 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3a5512689966e79b1729 responded 200 in 12.5441 ms
+2026-09-06 15:33:02.232 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3a5512689966e79b1729/publish responded 204 in 0.1343 ms
+2026-09-06 15:33:02.289 +05:30 [INF] Product published: 6a9d3a5512689966e79b1729
+2026-09-06 15:33:02.299 +05:30 [INF] HTTP POST /api/v1/products/6a9d3a5512689966e79b1729/publish responded 200 in 56.3584 ms
+2026-09-06 15:44:14.603 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-06 15:44:14.913 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-06 15:44:14.926 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-06 15:44:14.930 +05:30 [INF] Hosting environment: Production
+2026-09-06 15:44:14.932 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-06 15:45:26.585 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-06 15:45:26.629 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 43.1959 ms
+2026-09-06 15:45:30.558 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 3885.7324 ms
+2026-09-06 15:46:35.220 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3d7d5d28a6ad1ab4a296 responded 204 in 1.1704 ms
+2026-09-06 15:46:35.644 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3d7d5d28a6ad1ab4a296 responded 404 in 410.4114 ms
+2026-09-06 15:46:35.669 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1615 ms
+2026-09-06 15:46:35.866 +05:30 [INF] Product draft created: 6a9d3d83b14270a050a52cf5 for seller: dev-seller-1
+2026-09-06 15:46:35.883 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 198.1367 ms
+2026-09-06 15:46:35.917 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3d83b14270a050a52cf5 responded 204 in 0.2642 ms
+2026-09-06 15:46:35.974 +05:30 [INF] Product updated: 6a9d3d83b14270a050a52cf5
+2026-09-06 15:46:36.055 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3d83b14270a050a52cf5 responded 200 in 123.2698 ms
+2026-09-06 15:46:36.095 +05:30 [INF] Product updated: 6a9d3d83b14270a050a52cf5
+2026-09-06 15:46:36.100 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3d83b14270a050a52cf5 responded 200 in 27.2463 ms
+2026-09-06 15:46:36.115 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3d83b14270a050a52cf5/publish responded 204 in 0.1452 ms
+2026-09-06 15:46:36.151 +05:30 [INF] Product published: 6a9d3d83b14270a050a52cf5
+2026-09-06 15:46:36.161 +05:30 [INF] HTTP POST /api/v1/products/6a9d3d83b14270a050a52cf5/publish responded 200 in 37.7800 ms
+2026-09-06 15:55:19.417 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 6.9185 ms
+2026-09-06 15:55:21.452 +05:30 [INF] Seller logged in: mathimathiyazahgan@gmail.com
+2026-09-06 15:55:21.469 +05:30 [INF] HTTP POST /api/v1/auth/login responded 200 in 2035.3334 ms
+2026-09-06 15:55:21.535 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.3706 ms
+2026-09-06 15:55:21.771 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 220.6516 ms
+2026-09-06 15:56:26.220 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3fcc18a12df16616f628 responded 204 in 0.3337 ms
+2026-09-06 15:56:26.285 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3fcc18a12df16616f628 responded 404 in 52.9248 ms
+2026-09-06 15:56:26.303 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1048 ms
+2026-09-06 15:56:26.421 +05:30 [INF] Product draft created: 6a9d3fd2b14270a050a52cfa for seller: 65f1a2b3c4d5e6f7a8b9c0f1
+2026-09-06 15:56:26.425 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 114.0531 ms
+2026-09-06 15:56:26.439 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3fd2b14270a050a52cfa responded 204 in 0.1368 ms
+2026-09-06 15:56:27.105 +05:30 [INF] Product updated: 6a9d3fd2b14270a050a52cfa
+2026-09-06 15:56:27.113 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3fd2b14270a050a52cfa responded 200 in 665.4715 ms
+2026-09-06 15:56:28.017 +05:30 [INF] Product updated: 6a9d3fd2b14270a050a52cfa
+2026-09-06 15:56:28.021 +05:30 [INF] HTTP PUT /api/v1/products/6a9d3fd2b14270a050a52cfa responded 200 in 888.2534 ms
+2026-09-06 15:56:28.037 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d3fd2b14270a050a52cfa/publish responded 204 in 0.1096 ms
+2026-09-06 15:56:30.150 +05:30 [INF] Product published: 6a9d3fd2b14270a050a52cfa
+2026-09-06 15:56:30.154 +05:30 [INF] HTTP POST /api/v1/products/6a9d3fd2b14270a050a52cfa/publish responded 200 in 2106.1566 ms
+2026-09-06 15:59:44.684 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.2433 ms
+2026-09-06 15:59:45.820 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 1129.8061 ms
+2026-09-06 16:00:27.611 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d40becee5b9e7b9cd61b8 responded 204 in 0.1349 ms
+2026-09-06 16:00:27.728 +05:30 [INF] HTTP PUT /api/v1/products/6a9d40becee5b9e7b9cd61b8 responded 404 in 91.0942 ms
+2026-09-06 16:00:27.753 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1097 ms
+2026-09-06 16:00:27.823 +05:30 [INF] Product draft created: 6a9d40c3b14270a050a52d02 for seller: 65f1a2b3c4d5e6f7a8b9c0f1
+2026-09-06 16:00:27.828 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 65.6639 ms
+2026-09-06 16:00:27.841 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d40c3b14270a050a52d02 responded 204 in 0.1267 ms
+2026-09-06 16:00:28.265 +05:30 [INF] Product updated: 6a9d40c3b14270a050a52d02
+2026-09-06 16:00:28.270 +05:30 [INF] HTTP PUT /api/v1/products/6a9d40c3b14270a050a52d02 responded 200 in 420.3299 ms
+2026-09-06 16:00:28.653 +05:30 [INF] Product updated: 6a9d40c3b14270a050a52d02
+2026-09-06 16:00:28.657 +05:30 [INF] HTTP PUT /api/v1/products/6a9d40c3b14270a050a52d02 responded 200 in 359.4548 ms
+2026-09-06 16:00:28.670 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d40c3b14270a050a52d02/publish responded 204 in 0.2532 ms
+2026-09-06 16:00:29.008 +05:30 [INF] Product published: 6a9d40c3b14270a050a52d02
+2026-09-06 16:00:29.012 +05:30 [INF] HTTP POST /api/v1/products/6a9d40c3b14270a050a52d02/publish responded 200 in 336.4259 ms
+2026-09-06 16:04:42.703 +05:30 [INF] Application is shutting down...
+2026-09-06 16:04:59.900 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-06 16:05:00.169 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-06 16:05:00.179 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-06 16:05:00.184 +05:30 [INF] Hosting environment: Production
+2026-09-06 16:05:00.202 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-06 16:08:00.831 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-06 16:08:00.862 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 32.8491 ms
+2026-09-06 16:08:05.027 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 4103.4108 ms
+2026-09-06 16:09:14.675 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.9169 ms
+2026-09-06 16:09:14.813 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 130.6244 ms
+2026-09-06 16:10:29.691 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d431966ae6cf134ba4dae responded 204 in 0.3657 ms
+2026-09-06 16:10:30.057 +05:30 [INF] HTTP PUT /api/v1/products/6a9d431966ae6cf134ba4dae responded 404 in 354.0972 ms
+2026-09-06 16:10:30.070 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1111 ms
+2026-09-06 16:10:30.307 +05:30 [INF] Product draft created: 6a9d431efd7087b06616b432 for seller: 65f1a2b3c4d5e6f7a8b9c0f1
+2026-09-06 16:10:30.317 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 242.1212 ms
+2026-09-06 16:10:30.327 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d431efd7087b06616b432 responded 204 in 0.1218 ms
+2026-09-06 16:10:30.647 +05:30 [INF] Product updated: 6a9d431efd7087b06616b432
+2026-09-06 16:10:30.677 +05:30 [INF] HTTP PUT /api/v1/products/6a9d431efd7087b06616b432 responded 200 in 343.5108 ms
+2026-09-06 16:10:31.021 +05:30 [INF] Product updated: 6a9d431efd7087b06616b432
+2026-09-06 16:10:31.027 +05:30 [INF] HTTP PUT /api/v1/products/6a9d431efd7087b06616b432 responded 200 in 338.3260 ms
+2026-09-06 16:10:31.039 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d431efd7087b06616b432/publish responded 204 in 0.2711 ms
+2026-09-06 16:10:31.294 +05:30 [INF] Product published: 6a9d431efd7087b06616b432
+2026-09-06 16:10:31.299 +05:30 [INF] HTTP POST /api/v1/products/6a9d431efd7087b06616b432/publish responded 200 in 250.4634 ms
+2026-09-06 16:50:18.262 +05:30 [INF] Application is shutting down...
+2026-09-06 16:52:45.506 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-06 16:52:45.763 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-06 16:52:45.774 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-06 16:52:45.776 +05:30 [INF] Hosting environment: Production
+2026-09-06 16:52:45.779 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-06 16:53:50.033 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-06 16:53:50.053 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 21.2092 ms
+2026-09-06 16:53:54.374 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 4279.4883 ms
+2026-09-06 16:54:37.210 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4d728ecc81dc9f30c33e responded 204 in 0.8141 ms
+2026-09-06 16:54:37.531 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4d728ecc81dc9f30c33e responded 404 in 311.3733 ms
+2026-09-06 16:54:37.543 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.0959 ms
+2026-09-06 16:54:37.749 +05:30 [INF] Product draft created: 6a9d4d75d83f253f5c3a0183 for seller: 65f1a2b3c4d5e6f7a8b9c0f1
+2026-09-06 16:54:37.756 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 207.4998 ms
+2026-09-06 16:54:37.767 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4d75d83f253f5c3a0183 responded 204 in 0.1183 ms
+2026-09-06 16:54:38.097 +05:30 [INF] Product updated: 6a9d4d75d83f253f5c3a0183
+2026-09-06 16:54:38.127 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4d75d83f253f5c3a0183 responded 200 in 355.1922 ms
+2026-09-06 16:54:38.572 +05:30 [INF] Product updated: 6a9d4d75d83f253f5c3a0183
+2026-09-06 16:54:38.583 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4d75d83f253f5c3a0183 responded 200 in 446.5805 ms
+2026-09-06 16:54:38.592 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4d75d83f253f5c3a0183/publish responded 204 in 0.1488 ms
+2026-09-06 16:54:38.916 +05:30 [INF] Product published: 6a9d4d75d83f253f5c3a0183
+2026-09-06 16:54:38.921 +05:30 [INF] HTTP POST /api/v1/products/6a9d4d75d83f253f5c3a0183/publish responded 200 in 323.0453 ms
+2026-09-06 16:56:43.802 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1001 ms
+2026-09-06 16:56:43.816 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 8.5029 ms
+2026-09-06 16:56:43.824 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 0.2076 ms
+2026-09-06 16:56:44.065 +05:30 [INF] HTTP POST /api/v1/auth/refresh responded 200 in 235.2866 ms
+2026-09-06 16:56:44.408 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 335.0924 ms
+2026-09-06 16:56:52.813 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.2903 ms
+2026-09-06 16:56:53.222 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 403.2258 ms
+2026-09-06 16:57:36.252 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1912 ms
+2026-09-06 16:57:36.620 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 362.1947 ms
+2026-09-06 16:57:59.312 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.0910 ms
+2026-09-06 16:57:59.717 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 397.7065 ms
+2026-09-06 16:58:49.148 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4e6dd58993ad7dfc02dd responded 204 in 0.5103 ms
+2026-09-06 16:58:49.250 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4e6dd58993ad7dfc02dd responded 404 in 92.9182 ms
+2026-09-06 16:58:49.267 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1645 ms
+2026-09-06 16:58:49.351 +05:30 [INF] Product draft created: 6a9d4e71d83f253f5c3a0193 for seller: 65f1a2b3c4d5e6f7a8b9c0f1
+2026-09-06 16:58:49.354 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 81.1424 ms
+2026-09-06 16:58:49.366 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 204 in 0.0782 ms
+2026-09-06 16:58:49.616 +05:30 [INF] Product updated: 6a9d4e71d83f253f5c3a0193
+2026-09-06 16:58:49.620 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 200 in 246.7181 ms
+2026-09-06 16:58:50.054 +05:30 [INF] Product updated: 6a9d4e71d83f253f5c3a0193
+2026-09-06 16:58:50.058 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 200 in 427.7117 ms
+2026-09-06 16:58:50.068 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4e71d83f253f5c3a0193/publish responded 204 in 0.1578 ms
+2026-09-06 16:58:50.357 +05:30 [INF] Product published: 6a9d4e71d83f253f5c3a0193
+2026-09-06 16:58:50.359 +05:30 [INF] HTTP POST /api/v1/products/6a9d4e71d83f253f5c3a0193/publish responded 200 in 285.1002 ms
+2026-09-06 17:02:11.445 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 204 in 0.1350 ms
+2026-09-06 17:02:11.866 +05:30 [INF] Product updated: 6a9d4e71d83f253f5c3a0193
+2026-09-06 17:02:11.871 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 200 in 421.4873 ms
+2026-09-06 17:02:12.186 +05:30 [INF] Product updated: 6a9d4e71d83f253f5c3a0193
+2026-09-06 17:02:12.188 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 200 in 308.5224 ms
+2026-09-06 17:02:12.199 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4e71d83f253f5c3a0193/publish responded 204 in 0.0955 ms
+2026-09-06 17:02:12.492 +05:30 [INF] Product published: 6a9d4e71d83f253f5c3a0193
+2026-09-06 17:02:12.494 +05:30 [INF] HTTP POST /api/v1/products/6a9d4e71d83f253f5c3a0193/publish responded 200 in 288.9272 ms
+2026-09-06 17:05:43.600 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 204 in 0.0845 ms
+2026-09-06 17:05:44.005 +05:30 [INF] Product updated: 6a9d4e71d83f253f5c3a0193
+2026-09-06 17:05:44.008 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 200 in 403.5586 ms
+2026-09-06 17:05:44.319 +05:30 [INF] Product updated: 6a9d4e71d83f253f5c3a0193
+2026-09-06 17:05:44.323 +05:30 [INF] HTTP PUT /api/v1/products/6a9d4e71d83f253f5c3a0193 responded 200 in 304.2123 ms
+2026-09-06 17:05:44.335 +05:30 [INF] HTTP OPTIONS /api/v1/products/6a9d4e71d83f253f5c3a0193/publish responded 204 in 0.0983 ms
+2026-09-06 17:05:44.646 +05:30 [INF] Product published: 6a9d4e71d83f253f5c3a0193
+2026-09-06 17:05:44.647 +05:30 [INF] HTTP POST /api/v1/products/6a9d4e71d83f253f5c3a0193/publish responded 200 in 305.5021 ms
+2026-09-06 17:06:41.046 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.0987 ms
+2026-09-06 17:06:41.618 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 544.9116 ms

@@ -1,0 +1,7 @@
+# .NET specific
+bin/
+obj/
+*.user
+*.suo
+*.cache
+.vs/

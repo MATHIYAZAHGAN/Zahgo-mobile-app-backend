@@ -1,0 +1,236 @@
+2026-09-05 00:09:34.500 +05:30 [INF] Application is shutting down...
+2026-09-05 00:10:05.416 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-05 00:10:05.561 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-05 00:10:05.592 +05:30 [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-09-05 00:10:05.606 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-05 00:10:05.607 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 00:10:05.608 +05:30 [INF] Hosting environment: Development
+2026-09-05 00:10:05.609 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-05 00:11:27.826 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-05 00:11:58.254 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 30429.2696 ms
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.PipeReader.ReadAtLeastAsyncCore(Int32 minimumSize, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.PipeReadBufferState.ReadAsync(PipeReader utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-05 00:11:58.318 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 23.3844 ms
+2026-09-05 00:12:28.522 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 00:12:28.554 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30185.8408 ms
+2026-09-05 00:20:42.294 +05:30 [INF] Application is shutting down...
+2026-09-05 00:21:37.408 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-05 00:21:37.553 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-05 00:21:37.587 +05:30 [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-09-05 00:21:37.603 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-05 00:21:37.605 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 00:21:37.606 +05:30 [INF] Hosting environment: Development
+2026-09-05 00:21:37.608 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-05 00:22:18.401 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-05 00:22:52.328 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 22.0760 ms
+2026-09-05 00:23:18.910 +05:30 [ERR] Error during login
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.LoginAsync(LoginRequest request, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 147
+   at ZahSellerAI.API.Controllers.AuthController.Login(LoginRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 82
+2026-09-05 00:23:18.944 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 60545.3931 ms
+2026-09-05 00:23:22.455 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 00:23:22.459 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30067.4019 ms
+2026-09-05 00:27:11.145 +05:30 [INF] HTTP POST /api/v1/products/6a9b146e0ab3cf2d09f2039d/publish responded 401 in 2.4000 ms
+2026-09-05 00:30:17.150 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 2.3383 ms
+2026-09-05 00:30:46.850 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1978 ms
+2026-09-05 00:30:46.858 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 3.2899 ms
+2026-09-05 00:30:46.961 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 0.1318 ms
+2026-09-05 00:30:47.168 +05:30 [ERR] Error during login
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.LoginAsync(LoginRequest request, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 147
+   at ZahSellerAI.API.Controllers.AuthController.Login(LoginRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 82
+2026-09-05 00:30:47.172 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 30017.1309 ms
+2026-09-05 00:31:16.979 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 00:31:16.982 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30016.2227 ms
+2026-09-05 00:33:48.890 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 0.1891 ms
+2026-09-05 00:36:37.542 +05:30 [INF] Application is shutting down...
+2026-09-05 00:36:52.771 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-05 00:36:52.945 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-05 00:36:53.031 +05:30 [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-09-05 00:36:53.057 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-05 00:36:53.060 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 00:36:53.062 +05:30 [INF] Hosting environment: Development
+2026-09-05 00:36:53.063 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-05 00:37:49.456 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-05 00:38:19.627 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 29.6566 ms
+2026-09-05 00:38:19.863 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 30409.0944 ms
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.PipeReader.ReadAtLeastAsyncCore(Int32 minimumSize, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.PipeReadBufferState.ReadAsync(PipeReader utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-05 00:38:49.979 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 00:38:50.007 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30300.3187 ms
+2026-09-05 00:43:18.604 +05:30 [INF] Application is shutting down...
+2026-09-05 00:43:32.670 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-05 00:43:32.860 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-05 00:43:32.897 +05:30 [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-09-05 00:43:32.912 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-05 00:43:32.914 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 00:43:32.915 +05:30 [INF] Hosting environment: Development
+2026-09-05 00:43:32.916 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-05 00:44:28.117 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-05 00:45:00.978 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 25.0627 ms
+2026-09-05 00:45:28.651 +05:30 [ERR] Error during login
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.LoginAsync(LoginRequest request, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 147
+   at ZahSellerAI.API.Controllers.AuthController.Login(LoginRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 82
+2026-09-05 00:45:28.682 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 60568.1559 ms
+2026-09-05 00:45:31.103 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 00:45:31.107 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30072.4457 ms
+2026-09-05 00:47:47.249 +05:30 [INF] Application is shutting down...
+2026-09-05 00:47:58.596 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-05 00:47:58.735 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-05 00:47:58.767 +05:30 [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-09-05 00:47:58.783 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-05 00:47:58.784 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 00:47:58.786 +05:30 [INF] Hosting environment: Development
+2026-09-05 00:47:58.787 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-05 00:50:24.220 +05:30 [INF] Application is shutting down...
+2026-09-05 00:50:34.134 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-05 00:50:34.281 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-05 00:50:34.307 +05:30 [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-09-05 00:50:34.320 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-05 00:50:34.321 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 00:50:34.322 +05:30 [INF] Hosting environment: Development
+2026-09-05 00:50:34.324 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-05 00:51:23.497 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-05 00:51:53.896 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 30399.4865 ms
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.PipeReader.ReadAtLeastAsyncCore(Int32 minimumSize, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.PipeReadBufferState.ReadAsync(PipeReader utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-05 00:51:53.979 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 27.7118 ms
+2026-09-05 00:52:24.179 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 00:52:24.203 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30171.9731 ms
+2026-09-05 00:55:45.274 +05:30 [INF] Application is shutting down...
+2026-09-05 00:57:10.873 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-05 00:57:10.994 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-05 00:57:11.021 +05:30 [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-09-05 00:57:11.034 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-05 00:57:11.036 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 00:57:11.037 +05:30 [INF] Hosting environment: Development
+2026-09-05 00:57:11.039 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-05 00:58:01.051 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-05 00:58:31.274 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 26.0345 ms
+2026-09-05 00:58:31.463 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 30415.2027 ms
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.PipeReader.ReadAtLeastAsyncCore(Int32 minimumSize, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.PipeReadBufferState.ReadAsync(PipeReader utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-05 00:59:01.613 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 00:59:01.645 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30291.4128 ms
+2026-09-05 01:01:38.714 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 2.6344 ms
+2026-09-05 01:02:08.435 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1616 ms
+2026-09-05 01:02:08.448 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 3.8699 ms
+2026-09-05 01:02:08.533 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 0.0832 ms
+2026-09-05 01:02:08.742 +05:30 [ERR] Error during login
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.LoginAsync(LoginRequest request, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 147
+   at ZahSellerAI.API.Controllers.AuthController.Login(LoginRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 82
+2026-09-05 01:02:08.747 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 30027.4839 ms
+2026-09-05 01:02:38.553 +05:30 [ERR] Error refreshing token
+System.InvalidOperationException: JWT_SECRET not configured
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.GenerateAccessToken(Seller seller) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 266
+   at ZahSellerAI.Infrastructure.Services.AuthenticationService.RefreshTokenAsync(String refreshToken, String ipAddress) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\Services\AuthenticationService.cs:line 202
+   at ZahSellerAI.API.Controllers.AuthController.RefreshToken(RefreshTokenRequest request) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\AuthController.cs:line 119
+2026-09-05 01:02:38.556 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30019.1396 ms
+2026-09-05 01:04:35.464 +05:30 [INF] HTTP POST /api/v1/products/6a9b1d3018702e4d65afcd46/publish responded 401 in 1.8510 ms
+2026-09-05 01:12:51.377 +05:30 [INF] Application is shutting down...

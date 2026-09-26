@@ -1,0 +1,26 @@
+2026-09-27 01:57:28.745 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-27 01:57:29.073 +05:30 [INF] Now listening on: http://0.0.0.0:5000
+2026-09-27 01:57:29.085 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 01:57:29.089 +05:30 [INF] Hosting environment: Production
+2026-09-27 01:57:29.097 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\src\API
+2026-09-27 01:57:36.783 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 01:57:36.797 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab829fa68742c2a596b49c7 responded 204 in 15.6503 ms
+2026-09-27 01:57:38.835 +05:30 [INF] HTTP PUT /api/v1/products/6ab829fa68742c2a596b49c7 responded 401 in 1945.0050 ms
+2026-09-27 01:57:38.862 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 2.0044 ms
+2026-09-27 01:57:44.359 +05:30 [INF] HTTP POST /api/v1/auth/refresh responded 200 in 5474.8261 ms
+2026-09-27 01:57:44.371 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab829fa68742c2a596b49c7 responded 204 in 0.1660 ms
+2026-09-27 01:57:44.762 +05:30 [INF] HTTP PUT /api/v1/products/6ab829fa68742c2a596b49c7 responded 404 in 379.7904 ms
+2026-09-27 01:57:44.775 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.1741 ms
+2026-09-27 01:57:44.994 +05:30 [INF] Product draft created: 6ab82ac0f95b4c69ddbc0c22 for seller: 65f1a2b3c4d5e6f7a8b9c0f1
+2026-09-27 01:57:45.006 +05:30 [INF] HTTP POST /api/v1/products responded 200 in 214.8189 ms
+2026-09-27 01:57:45.020 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab82ac0f95b4c69ddbc0c22 responded 204 in 0.2187 ms
+2026-09-27 01:57:45.304 +05:30 [INF] Product updated: 6ab82ac0f95b4c69ddbc0c22
+2026-09-27 01:57:45.348 +05:30 [INF] HTTP PUT /api/v1/products/6ab82ac0f95b4c69ddbc0c22 responded 200 in 320.7417 ms
+2026-09-27 01:57:45.372 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab82ac0f95b4c69ddbc0c22 responded 204 in 0.3129 ms
+2026-09-27 01:57:45.596 +05:30 [INF] Product updated: 6ab82ac0f95b4c69ddbc0c22
+2026-09-27 01:57:45.599 +05:30 [INF] HTTP PUT /api/v1/products/6ab82ac0f95b4c69ddbc0c22 responded 200 in 204.5004 ms
+2026-09-27 01:57:45.609 +05:30 [INF] HTTP OPTIONS /api/v1/products/6ab82ac0f95b4c69ddbc0c22/publish responded 204 in 0.1242 ms
+2026-09-27 01:57:45.763 +05:30 [INF] Product published: 6ab82ac0f95b4c69ddbc0c22
+2026-09-27 01:57:45.770 +05:30 [INF] HTTP POST /api/v1/products/6ab82ac0f95b4c69ddbc0c22/publish responded 200 in 152.8225 ms
+2026-09-27 01:59:01.438 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.4509 ms
+2026-09-27 01:59:02.033 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 587.0212 ms

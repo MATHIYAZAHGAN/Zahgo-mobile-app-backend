@@ -1,0 +1,20 @@
+2026-09-02 00:33:22.345 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-02 00:33:22.513 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-02 00:33:22.551 +05:30 [INF] Now listening on: http://localhost:5000
+2026-09-02 00:33:22.554 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-02 00:33:22.556 +05:30 [INF] Hosting environment: Production
+2026-09-02 00:33:22.558 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-02 01:03:37.927 +05:30 [INF] Application is shutting down...
+2026-09-02 01:03:56.224 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-02 01:03:56.458 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-02 01:03:56.517 +05:30 [INF] Now listening on: http://localhost:5000
+2026-09-02 01:03:56.531 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-02 01:03:56.539 +05:30 [INF] Hosting environment: Production
+2026-09-02 01:03:56.545 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-09-02 01:20:54.254 +05:30 [INF] Application is shutting down...
+2026-09-02 01:21:11.082 +05:30 [INF] Starting ZAH Seller AI API
+2026-09-02 01:21:11.355 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\wwwroot. Static files may be unavailable.
+2026-09-02 01:21:11.440 +05:30 [INF] Now listening on: http://localhost:5000
+2026-09-02 01:21:11.449 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-02 01:21:11.453 +05:30 [INF] Hosting environment: Production
+2026-09-02 01:21:11.456 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API

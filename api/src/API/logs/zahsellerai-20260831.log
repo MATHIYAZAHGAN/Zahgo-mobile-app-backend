@@ -1,0 +1,50 @@
+2026-08-31 22:09:26.423 +05:30 [INF] Starting ZAH Seller AI API
+2026-08-31 22:09:26.932 +05:30 [INF] Now listening on: http://localhost:5000
+2026-08-31 22:09:26.944 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-31 22:09:26.945 +05:30 [INF] Hosting environment: Production
+2026-08-31 22:09:26.945 +05:30 [INF] Content root path: C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API
+2026-08-31 22:09:57.024 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-08-31 22:09:57.145 +05:30 [INF] HTTP GET / responded 404 in 126.5135 ms
+2026-08-31 22:14:18.735 +05:30 [INF] HTTP HEAD /swagger/index.html responded 404 in 29.3819 ms
+2026-08-31 22:14:18.781 +05:30 [INF] HTTP GET /swagger/index.html responded 404 in 19.5369 ms
+2026-08-31 22:14:27.535 +05:30 [INF] HTTP HEAD /api/health responded 405 in 6.1132 ms
+2026-08-31 22:14:27.806 +05:30 [INF] HTTP GET /api/health responded 200 in 264.4836 ms
+2026-08-31 22:23:43.412 +05:30 [INF] HTTP OPTIONS /api/v1/auth/register responded 204 in 61.9687 ms
+2026-08-31 22:23:48.683 +05:30 [INF] Seller registered: mathimathiyazahgan@gmail.com
+2026-08-31 22:23:48.739 +05:30 [INF] HTTP POST /api/v1/auth/register responded 200 in 5286.6033 ms
+2026-08-31 22:24:22.375 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 0.4348 ms
+2026-08-31 22:24:22.645 +05:30 [INF] Seller logged in: mathimathiyazahgan@gmail.com
+2026-08-31 22:24:22.646 +05:30 [INF] HTTP POST /api/v1/auth/login responded 200 in 267.1373 ms
+2026-08-31 22:57:39.567 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 32.7386 ms
+2026-08-31 22:57:40.397 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 783.9348 ms
+2026-08-31 22:59:14.048 +05:30 [INF] HTTP OPTIONS /api/v1/products/prod-1788197342990/publish responded 204 in 0.4414 ms
+2026-08-31 22:59:14.114 +05:30 [ERR] Error publishing product prod-1788197342990
+System.FormatException: 'prod-1788197342990' is not a valid 24 digit hex string.
+   at MongoDB.Bson.ObjectId.Parse(String s)
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.SerializeValue(BsonSerializationContext context, BsonSerializationArgs args, String value)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Serialize(BsonSerializationContext context, BsonSerializationArgs args, TValue value)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Serialize(IBsonSerializer serializer, BsonSerializationContext context, Object value)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.SerializationHelper.SerializeValue(IBsonSerializer serializer, Object value)
+   at MongoDB.Driver.Linq.Linq3Implementation.Misc.SerializationHelper.SerializeValue(IBsonSerializer serializer, ConstantExpression constantExpression, Expression containingExpression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionTranslators.ComparisonExpressionToFilterTranslator.Translate(TranslationContext context, BinaryExpression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.TranslateUsingQueryOperators(TranslationContext context, Expression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.Translate(TranslationContext context, Expression expression, Boolean exprOk)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionTranslators.AndExpressionToFilterTranslator.Translate(TranslationContext context, BinaryExpression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.TranslateUsingQueryOperators(TranslationContext context, Expression expression)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.Translate(TranslationContext context, Expression expression, Boolean exprOk)
+   at MongoDB.Driver.Linq.Linq3Implementation.Translators.ExpressionToFilterTranslators.ExpressionToFilterTranslator.TranslateLambda(TranslationContext context, LambdaExpression lambdaExpression, IBsonSerializer parameterSerializer, Boolean asRoot)
+   at MongoDB.Driver.Linq.Linq3Implementation.LinqProviderAdapterV3.TranslateExpressionToFilter[TDocument](Expression`1 expression, IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.ExpressionFilterDefinition`1.Render(IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry, LinqProvider linqProvider)
+   at MongoDB.Driver.MongoCollectionImpl`1.CreateFindOperation[TProjection](FilterDefinition`1 filter, FindOptions`2 options)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindAsync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass54_0`1.<FindAsync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.FirstOrDefaultAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at ZahSellerAI.Infrastructure.MongoDB.Repositories.ProductRepository.GetByIdAndSellerIdAsync(String productId, String sellerId) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\Infrastructure\MongoDB\Repositories\ProductRepository.cs:line 44
+   at ZahSellerAI.API.Controllers.ProductsController.PublishProduct(String id) in C:\Users\Mathi\OneDrive\Desktop\ZAH APP\services\api\src\API\Controllers\ProductsController.cs:line 225
+2026-08-31 22:59:14.235 +05:30 [ERR] HTTP POST /api/v1/products/prod-1788197342990/publish responded 500 in 177.0493 ms
+2026-08-31 22:59:35.507 +05:30 [INF] HTTP OPTIONS /api/v1/auth/logout responded 204 in 0.0885 ms
+2026-08-31 22:59:35.711 +05:30 [INF] Seller logged out
+2026-08-31 22:59:35.714 +05:30 [INF] HTTP POST /api/v1/auth/logout responded 200 in 203.8937 ms
+2026-08-31 23:58:39.003 +05:30 [INF] HTTP GET /api/health responded 200 in 101.4636 ms
+2026-08-31 23:58:39.144 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 0.7427 ms
