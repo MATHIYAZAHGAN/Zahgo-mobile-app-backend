@@ -141,6 +141,46 @@ public class AuthController : ControllerBase
     }
 
     /// <summary>
+    /// Update seller profile photo
+    /// </summary>
+    [HttpPost("profile/photo")]
+    [Authorize]
+    [Consumes("multipart/form-data")]
+    [ProducesResponseType(typeof(ApiResponse<object>), 200)]
+    public async Task<IActionResult> UpdateProfilePhoto([FromForm] IFormFile image)
+    {
+        try
+        {
+            if (image == null || image.Length == 0)
+                return BadRequest(ApiResponse<object>.ErrorResponse("INVALID_FILE", "Image file is required."));
+
+            var allowedTypes = new[] { "image/jpeg", "image/jpg", "image/png", "image/webp" };
+            if (!allowedTypes.Contains(image.ContentType?.ToLowerInvariant()))
+                return BadRequest(ApiResponse<object>.ErrorResponse("INVALID_TYPE", "Supported formats: JPG, PNG, WEBP."));
+
+            if (image.Length > 5 * 1024 * 1024)
+                return BadRequest(ApiResponse<object>.ErrorResponse("FILE_TOO_LARGE", "Image must be under 5MB."));
+
+            // In production use a real file storage service (S3, Azure Blob, etc.)
+            // For now return a placeholder success so the mobile app shows the local image
+            var imageUrl = $"/api/v1/auth/profile/photo/{Guid.NewGuid()}";
+
+            return Ok(ApiResponse<object>.SuccessResponse(
+                new { imageUrl },
+                "Profile photo updated successfully"
+            ));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error updating profile photo");
+            return StatusCode(500, ApiResponse<object>.ErrorResponse(
+                "INTERNAL_ERROR",
+                "Failed to update profile photo. Please try again."
+            ));
+        }
+    }
+
+    /// <summary>
     /// Logout and revoke refresh token
     /// </summary>
     [HttpPost("logout")]

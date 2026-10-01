@@ -26,6 +26,51 @@ public class ProductsController : ControllerBase
     }
 
     /// <summary>
+    /// Get recent products (last 10, sorted by createdAt DESC)
+    /// </summary>
+    [HttpGet("recent")]
+    [ProducesResponseType(typeof(ApiResponse<ProductListResponse>), 200)]
+    public async Task<IActionResult> GetRecentProducts([FromQuery] int limit = 10)
+    {
+        try
+        {
+            var sellerId = GetSellerIdFromClaims();
+            var products = await _productRepository.GetBySellerIdAsync(
+                sellerId, 1, Math.Min(limit, 20), null);
+
+            var response = new ProductListResponse
+            {
+                Products = products.Select(p => new ProductSummaryDto
+                {
+                    Id = p.Id,
+                    Name = p.Name.Value ?? "Untitled Product",
+                    Brand = p.Brand.Value,
+                    Price = p.Pricing.Price.Value,
+                    PrimaryImageUrl = p.Images.FirstOrDefault(i => i.IsPrimary)?.ThumbnailUrl
+                        ?? p.Images.FirstOrDefault()?.ThumbnailUrl,
+                    Status = p.Status,
+                    CreatedAt = p.CreatedAt,
+                    UpdatedAt = p.UpdatedAt
+                }).ToList(),
+                Total = products.Count,
+                Page = 1,
+                PageSize = limit,
+                HasMore = false
+            };
+
+            return Ok(ApiResponse<ProductListResponse>.SuccessResponse(response));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error getting recent products");
+            return StatusCode(500, ApiResponse<object>.ErrorResponse(
+                "INTERNAL_ERROR",
+                "Failed to get recent products. Please try again."
+            ));
+        }
+    }
+
+    /// <summary>
     /// Create a new product draft
     /// </summary>
     [HttpPost]
