@@ -27,6 +27,9 @@ if (File.Exists(envFilePath))
         }
     }
 }
+// The local .env file is loaded after WebApplicationBuilder creation; reload the
+// environment provider now so its values override appsettings for this process.
+builder.Configuration.AddEnvironmentVariables();
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
@@ -92,8 +95,11 @@ builder.Services.AddSwaggerGen(options =>
 // Configure JWT Authentication
 var jwtSecret = builder.Configuration["JWT_SECRET"] 
     ?? builder.Configuration["JWT:Secret"]
-    ?? Environment.GetEnvironmentVariable("JWT_SECRET")
-    ?? "zahgo*51228-ZahSellerAI-JWT-Secret-Key-2024";
+    ?? Environment.GetEnvironmentVariable("JWT_SECRET");
+if (string.IsNullOrWhiteSpace(jwtSecret) || jwtSecret.Length < 32)
+{
+    throw new InvalidOperationException("Set JWT_SECRET to a random secret with at least 32 characters before starting the API.");
+}
 var jwtIssuer = builder.Configuration["JWT_ISSUER"] 
     ?? builder.Configuration["JWT:Issuer"]
     ?? Environment.GetEnvironmentVariable("JWT_ISSUER")

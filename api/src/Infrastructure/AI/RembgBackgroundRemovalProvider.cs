@@ -45,11 +45,12 @@ public class RembgBackgroundRemovalProvider : IBackgroundRemovalProvider
         );
 
         // Get Remove.bg API key from configuration
-        var apiKey = _configuration["AI:BackgroundRemoval:ApiKey"];
+        var apiKey = _configuration["AI:BackgroundRemoval:ApiKey"]
+            ?? _configuration["REMOVEBG_API_KEY"];
         if (string.IsNullOrEmpty(apiKey))
         {
-            _logger.LogError("Remove.bg API key not configured. Please set AI:BackgroundRemoval:ApiKey in appsettings.json");
-            throw new InvalidOperationException("Remove.bg API key not configured");
+            _logger.LogWarning("Remove.bg API key is not configured");
+            throw new InvalidOperationException("Photo background removal is not configured");
         }
 
         try
