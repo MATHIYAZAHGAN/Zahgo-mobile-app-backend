@@ -1,7 +1,12 @@
 # .NET specific
 bin/
 obj/
+publish/
 *.user
 *.suo
 *.cache
 .vs/
+
+# Environment / secrets
+.env
+!.env.example
