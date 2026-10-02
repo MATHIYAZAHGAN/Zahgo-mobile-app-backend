@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using ZahSellerAI.API.Hubs;
 using ZahSellerAI.Application.Interfaces;
 using ZahSellerAI.Domain.Entities;
+using ZahSellerAI.Shared.DTOs;
 
 namespace ZahSellerAI.API.Controllers;
 
@@ -19,6 +21,8 @@ public class AIProductController : ControllerBase
     private readonly IImageAnalysisProvider _imageAnalysisProvider;
     private readonly IHubContext<AIProcessingHub, IAIProcessingClient> _hubContext;
     private readonly ILogger<AIProductController> _logger;
+    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly IConfiguration _configuration;
 
     public AIProductController(
         IGeminiImageService geminiImageService,
@@ -27,7 +31,9 @@ public class AIProductController : ControllerBase
         IImageGenerationProvider imageGenProvider,
         IImageAnalysisProvider imageAnalysisProvider,
         IHubContext<AIProcessingHub, IAIProcessingClient> hubContext,
-        ILogger<AIProductController> logger)
+        ILogger<AIProductController> logger,
+        IHttpClientFactory httpClientFactory,
+        IConfiguration configuration)
     {
         _geminiImageService = geminiImageService;
         _storageService = storageService;
@@ -36,6 +42,51 @@ public class AIProductController : ControllerBase
         _imageAnalysisProvider = imageAnalysisProvider;
         _hubContext = hubContext;
         _logger = logger;
+        _httpClientFactory = httpClientFactory;
+        _configuration = configuration;
+    }
+
+    /// <summary>Remove a product-photo background without exposing provider credentials to the app.</summary>
+    [Authorize]
+    [HttpPost("remove-background")]
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> RemoveBackground([FromForm] IFormFile image, CancellationToken cancellationToken)
+    {
+        if (image == null || image.Length == 0)
+            return BadRequest(ApiResponse<object>.ErrorResponse("IMAGE_REQUIRED", "Choose a product photo first."));
+        if (image.Length > 15 * 1024 * 1024)
+            return BadRequest(ApiResponse<object>.ErrorResponse("IMAGE_TOO_LARGE", "Choose a photo smaller than 15 MB."));
+
+        var contentType = image.ContentType?.ToLowerInvariant();
+        if (contentType is not ("image/jpeg" or "image/jpg" or "image/png" or "image/webp"))
+            return BadRequest(ApiResponse<object>.ErrorResponse("IMAGE_FORMAT_UNSUPPORTED", "Use a JPG, PNG, or WEBP photo."));
+
+        try
+        {
+            await using var stream = image.OpenReadStream();
+            var result = await _bgRemovalProvider.RemoveBackgroundAsync(
+                stream,
+                Path.GetFileName(image.FileName),
+                cancellationToken);
+            return Ok(ApiResponse<object>.SuccessResponse(new
+            {
+                imageUrl = result.ProcessedImageUrl,
+                originalImageUrl = result.OriginalImageUrl,
+                provider = result.Provider
+            }, "Product photo prepared."));
+        }
+        catch (InvalidOperationException ex)
+        {
+            _logger.LogWarning(ex, "Background-removal service is not configured");
+            return StatusCode(503, ApiResponse<object>.ErrorResponse(
+                "IMAGE_PROCESSING_UNAVAILABLE", "Photo enhancement is temporarily unavailable. You can continue with the original photo."));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Product background removal failed");
+            return StatusCode(503, ApiResponse<object>.ErrorResponse(
+                "IMAGE_PROCESSING_FAILED", "Photo enhancement failed. You can continue with the original photo."));
+        }
     }
 
     /// <summary>
@@ -280,88 +331,59 @@ public class AIProductController : ControllerBase
     /// Transcribe Spoken Audio from Mobile Phone Microphone (Tamil/Tanglish/English)
     /// Converts recorded .m4a / base64 audio into transcript text & structured product draft.
     /// </summary>
+    [Authorize]
     [HttpPost("transcribe-audio")]
-    public async Task<IActionResult> TranscribeAudio([FromBody] AudioTranscriptionRequest request)
+    public async Task<IActionResult> TranscribeAudio([FromBody] AudioTranscriptionRequest request, CancellationToken cancellationToken)
     {
         try
         {
             var base64Data = request.Base64Audio ?? string.Empty;
-            if (string.IsNullOrWhiteSpace(base64Data))
+            if (string.IsNullOrWhiteSpace(base64Data) || base64Data.Length > 20 * 1024 * 1024)
             {
-                return BadRequest(new { success = false, message = "Audio data is required." });
+                return BadRequest(ApiResponse<object>.ErrorResponse("AUDIO_INVALID", "The recording is empty or too large. Please record a shorter answer."));
             }
 
-            _logger.LogInformation("🎙️ Received mobile microphone audio recording for transcription ({DataLength} chars)", base64Data.Length);
+            var apiKey = _configuration["AI:Gemini:ApiKey"] ?? _configuration["GEMINI_API_KEY"];
+            if (string.IsNullOrWhiteSpace(apiKey))
+                return StatusCode(503, ApiResponse<object>.ErrorResponse("VOICE_UNAVAILABLE", "Voice understanding is not configured yet. You can type your answer instead."));
 
-            // Transcribe audio using Gemini 1.5 Flash API or smart audio parser
-            var apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY") ?? string.Empty;
-            string tamilTranscript = string.Empty;
-            string englishTranslation = string.Empty;
-
-            if (!string.IsNullOrWhiteSpace(apiKey))
+            var model = _configuration["AI:Gemini:AudioModel"] ?? "gemini-2.5-flash";
+            var httpRequest = new HttpRequestMessage(
+                HttpMethod.Post,
+                $"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent");
+            httpRequest.Headers.Add("x-goog-api-key", apiKey);
+            httpRequest.Content = System.Net.Http.Json.JsonContent.Create(new
             {
-                using var httpClient = new HttpClient();
-                var geminiPayload = new
+                contents = new[] { new { role = "user", parts = new object[]
                 {
-                    contents = new[]
-                    {
-                        new
-                        {
-                            parts = new object[]
-                            {
-                                new
-                                {
-                                    inlineData = new
-                                    {
-                                        mimeType = request.MimeType ?? "audio/m4a",
-                                        data = base64Data
-                                    }
-                                },
-                                new
-                                {
-                                    text = "Listen to this spoken audio from an e-commerce reseller. 1) Transcribe exact Tamil/Tanglish spoken words as 'tamilTranscript'. 2) Translate to clear English product details as 'englishTranslation'. Return JSON format with keys 'tamilTranscript' and 'englishTranslation'."
-                                }
-                            }
-                        }
-                    }
-                };
-
-                var response = await httpClient.PostAsJsonAsync(
-                    $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={apiKey}",
-                    geminiPayload);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseJson = await response.Content.ReadFromJsonAsync<System.Text.Json.Nodes.JsonNode>();
-                    var textContent = responseJson?["candidates"]?[0]?["content"]?["parts"]?[0]?["text"]?.ToString();
-                    if (!string.IsNullOrWhiteSpace(textContent))
-                    {
-                        var match = System.Text.RegularExpressions.Regex.Match(textContent, @"\{[\s\S]*\}");
-                        if (match.Success)
-                        {
-                            var parsed = System.Text.Json.Nodes.JsonNode.Parse(match.Value);
-                            tamilTranscript = parsed?["tamilTranscript"]?.ToString() ?? string.Empty;
-                            englishTranslation = parsed?["englishTranslation"]?.ToString() ?? string.Empty;
-                        }
-                    }
-                }
-            }
-
-            // Fallback if API key is not configured or audio transcription failed
-            if (string.IsNullOrWhiteSpace(tamilTranscript))
-            {
-                _logger.LogInformation("Using smart Tamil speech fallback engine for recorded audio");
-                tamilTranscript = request.SampleUtterance ?? "Voice recorded successfully";
-                englishTranslation = tamilTranscript;
-            }
-
-            return Ok(new
-            {
-                success = true,
-                tamilTranscript,
-                englishTranslation,
-                message = "Audio transcribed successfully by Zah AI Engine"
+                    new { inlineData = new { mimeType = request.MimeType ?? "audio/m4a", data = base64Data } },
+                    new { text = $"Transcribe this product seller's speech exactly in its spoken language (Tamil, Tanglish, or English). Translate the meaning faithfully into clear English. Do not add product facts. Return JSON with transcript, englishTranslation, detectedLanguage (ta or en). The seller's preferred interface language is {request.PreferredLanguage}." }
+                } } },
+                generationConfig = new { responseMimeType = "application/json", temperature = 0.1 }
             });
+
+            using var response = await _httpClientFactory.CreateClient().SendAsync(httpRequest, cancellationToken);
+            if (!response.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("Audio transcription provider returned status {StatusCode}", (int)response.StatusCode);
+                return StatusCode(503, ApiResponse<object>.ErrorResponse("VOICE_UNAVAILABLE", "Voice understanding is temporarily unavailable. You can type your answer instead."));
+            }
+
+            var responseJson = await response.Content.ReadFromJsonAsync<System.Text.Json.Nodes.JsonNode>(cancellationToken: cancellationToken);
+            var textContent = responseJson?["candidates"]?[0]?["content"]?["parts"]?[0]?["text"]?.ToString();
+            var parsed = string.IsNullOrWhiteSpace(textContent)
+                ? null
+                : System.Text.Json.Nodes.JsonNode.Parse(textContent) as System.Text.Json.Nodes.JsonObject;
+            var transcript = parsed?["transcript"]?.ToString();
+            if (string.IsNullOrWhiteSpace(transcript))
+                return StatusCode(503, ApiResponse<object>.ErrorResponse("VOICE_UNAVAILABLE", "I could not hear that clearly. Please try again or type your answer."));
+
+            return Ok(ApiResponse<object>.SuccessResponse(new
+            {
+                transcript,
+                englishTranslation = parsed?["englishTranslation"]?.ToString() ?? string.Empty,
+                detectedLanguage = parsed?["detectedLanguage"]?.ToString() ?? request.PreferredLanguage
+            }, "Voice answer transcribed."));
         }
         catch (Exception ex)
         {
@@ -526,6 +548,7 @@ public class AudioTranscriptionRequest
     public string? Base64Audio { get; set; }
     public string? MimeType { get; set; } = "audio/m4a";
     public string? SampleUtterance { get; set; }
+    public string PreferredLanguage { get; set; } = "ta";
 }
 
 public class AssistantChatRequest

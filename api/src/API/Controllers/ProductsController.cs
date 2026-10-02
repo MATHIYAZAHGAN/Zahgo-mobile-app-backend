@@ -1,6 +1,8 @@
+using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZahSellerAI.Application.DTOs;
+using ZahSellerAI.Application.Interfaces;
 using ZahSellerAI.Domain.Entities;
 using ZahSellerAI.Domain.Enums;
 using ZahSellerAI.Domain.ValueObjects;
@@ -15,13 +17,16 @@ namespace ZahSellerAI.API.Controllers;
 public class ProductsController : ControllerBase
 {
     private readonly IProductRepository _productRepository;
+    private readonly IImageStorageService _imageStorageService;
     private readonly ILogger<ProductsController> _logger;
 
     public ProductsController(
         IProductRepository productRepository,
+        IImageStorageService imageStorageService,
         ILogger<ProductsController> logger)
     {
         _productRepository = productRepository;
+        _imageStorageService = imageStorageService;
         _logger = logger;
     }
 
@@ -213,6 +218,68 @@ public class ProductsController : ControllerBase
         }
     }
 
+    /// <summary>Upload a durable product image to a seller-owned draft.</summary>
+    [HttpPost("{id}/images")]
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> UploadProductImage(
+        string id,
+        [FromForm] IFormFile image,
+        CancellationToken cancellationToken)
+    {
+        if (image == null || image.Length == 0)
+            return BadRequest(ApiResponse<object>.ErrorResponse("IMAGE_REQUIRED", "Choose a product photo first."));
+        if (image.Length > 15 * 1024 * 1024)
+            return BadRequest(ApiResponse<object>.ErrorResponse("IMAGE_TOO_LARGE", "Choose a photo smaller than 15 MB."));
+
+        var contentType = image.ContentType?.ToLowerInvariant();
+        if (contentType is not ("image/jpeg" or "image/jpg" or "image/png" or "image/webp"))
+            return BadRequest(ApiResponse<object>.ErrorResponse("IMAGE_FORMAT_UNSUPPORTED", "Use a JPG, PNG, or WEBP photo."));
+
+        try
+        {
+            var sellerId = GetSellerIdFromClaims();
+            var product = await _productRepository.GetByIdAndSellerIdAsync(id, sellerId);
+            if (product == null)
+                return NotFound(ApiResponse<object>.ErrorResponse("PRODUCT_NOT_FOUND", "Product draft not found."));
+
+            await using var stream = image.OpenReadStream();
+            var fileName = Path.GetFileName(image.FileName);
+            var imageUrl = await _imageStorageService.UploadAsync(
+                stream,
+                fileName,
+                $"products/{product.Id}/images",
+                contentType!,
+                cancellationToken);
+
+            var productImage = new ProductImage
+            {
+                OriginalUrl = imageUrl,
+                OptimizedUrl = imageUrl,
+                ThumbnailUrl = imageUrl,
+                IsPrimary = product.Images.Count == 0,
+                Order = product.Images.Count + 1,
+                AltText = product.Name.Value ?? "Product",
+                Metadata = new ImageMetadata
+                {
+                    SizeInBytes = image.Length,
+                    Format = contentType!.Split('/').Last(),
+                    HasBackground = true
+                },
+                UploadedAt = DateTime.UtcNow
+            };
+            product.Images.Add(productImage);
+            product.UpdatedAt = DateTime.UtcNow;
+            await _productRepository.UpdateAsync(product);
+
+            return Ok(ApiResponse<object>.SuccessResponse(new { image = productImage }, "Product photo uploaded."));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error uploading image for product {ProductId}", id);
+            return StatusCode(500, ApiResponse<object>.ErrorResponse("IMAGE_UPLOAD_FAILED", "The photo could not be saved. Please try again."));
+        }
+    }
+
     /// <summary>
     /// Update product
     /// </summary>
@@ -274,6 +341,28 @@ public class ProductsController : ControllerBase
                 return NotFound(ApiResponse<object>.ErrorResponse(
                     "PRODUCT_NOT_FOUND",
                     "Product not found"
+                ));
+            }
+
+            if (string.IsNullOrWhiteSpace(product.Name.Value) ||
+                string.IsNullOrWhiteSpace(product.CategoryName.Value) ||
+                product.Pricing.Price.Value <= 0 ||
+                product.Inventory.StockQuantity.Value < 0 ||
+                product.Images.Count == 0)
+            {
+                return BadRequest(ApiResponse<object>.ErrorResponse(
+                    "LISTING_INCOMPLETE",
+                    "Add an English product name, category, selling price, available quantity, and product photo before publishing."
+                ));
+            }
+
+            var listingText = new[] { product.Name.Value, product.CategoryName.Value, product.ShortDescription, product.Description }
+                .Concat(product.Highlights ?? new List<string>());
+            if (listingText.Any(ContainsNonLatinLetters))
+            {
+                return BadRequest(ApiResponse<object>.ErrorResponse(
+                    "LISTING_MUST_BE_ENGLISH",
+                    "The marketplace listing must be in English. Generate or edit the English listing before publishing."
                 ));
             }
 
@@ -430,6 +519,9 @@ public class ProductsController : ControllerBase
             _ => "Unknown"
         };
     }
+
+    private static bool ContainsNonLatinLetters(string? value) =>
+        !string.IsNullOrEmpty(value) && value.EnumerateRunes().Any(rune => Rune.IsLetter(rune) && rune.Value > 0x024F);
 
     private int? GetEstimatedTime(ProductStatus status)
     {

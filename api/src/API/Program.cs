@@ -173,6 +173,7 @@ builder.Services.AddHttpClient<ZahSellerAI.Application.Interfaces.IGeminiImageSe
 
 // Add HttpClient factory for Remove.bg and other HTTP services
 builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<ZahSellerAI.API.Services.CatalogAgentOrchestrator>();
 
 // Legacy background-removal pipeline (kept for backward compatibility, no longer used by AI Product Studio)
 builder.Services.AddScoped<ZahSellerAI.Application.Interfaces.IBackgroundRemovalProvider,
