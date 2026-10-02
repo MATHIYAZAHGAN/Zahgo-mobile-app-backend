@@ -1,0 +1,268 @@
+2026-10-01 23:22:25.673 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-01 23:22:25.756 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 23:22:25.884 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-01 23:22:25.991 +05:30 [INF] Now listening on: http://[::]:10000
+2026-10-01 23:22:25.995 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 23:22:25.998 +05:30 [INF] Hosting environment: Production
+2026-10-01 23:22:26.001 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-01 23:26:39.825 +05:30 [INF] Application is shutting down...
+2026-10-01 23:26:49.332 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-01 23:26:49.413 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 23:26:49.480 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-01 23:26:49.513 +05:30 [INF] Now listening on: http://[::]:10000
+2026-10-01 23:26:49.516 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 23:26:49.518 +05:30 [INF] Hosting environment: Production
+2026-10-01 23:26:49.520 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-01 23:27:43.328 +05:30 [INF] Application is shutting down...
+2026-10-01 23:27:56.677 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-01 23:27:56.765 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 23:27:56.864 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-01 23:27:56.901 +05:30 [INF] Now listening on: http://[::]:5000
+2026-10-01 23:27:56.904 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 23:27:56.905 +05:30 [INF] Hosting environment: Production
+2026-10-01 23:27:56.906 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-01 23:28:02.664 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - null null
+2026-10-01 23:28:02.795 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:28:02.804 +05:30 [INF] HTTP OPTIONS /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 204 in 11.9529 ms
+2026-10-01 23:28:02.821 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 204 null null 161.7148ms
+2026-10-01 23:28:02.865 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - application/json 26887
+2026-10-01 23:28:02.900 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:28:04.967 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'zUhEYxHcdf0rhZKnecOlz3TF5tjrRJVJaD8ggF7RMrs'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-10-01 23:28:05.013 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'zUhEYxHcdf0rhZKnecOlz3TF5tjrRJVJaD8ggF7RMrs'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-10-01 23:28:05.031 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:28:05.045 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:28:05.048 +05:30 [INF] HTTP PUT /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 401 in 2149.7389 ms
+2026-10-01 23:28:05.059 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 401 0 null 2193.6372ms
+2026-10-01 23:28:05.074 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - null null
+2026-10-01 23:28:05.083 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:28:05.086 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 3.4143 ms
+2026-10-01 23:28:05.092 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - 204 null null 18.1552ms
+2026-10-01 23:28:05.101 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - application/json 107
+2026-10-01 23:28:05.111 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:28:05.118 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'zUhEYxHcdf0rhZKnecOlz3TF5tjrRJVJaD8ggF7RMrs'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-10-01 23:28:05.126 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'zUhEYxHcdf0rhZKnecOlz3TF5tjrRJVJaD8ggF7RMrs'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-10-01 23:28:05.132 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-01 23:28:05.176 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(ZahSellerAI.Application.DTOs.RefreshTokenRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-01 23:28:35.989 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API) in 30788.4384ms
+2026-10-01 23:28:35.995 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-01 23:28:36.001 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30889.7586 ms
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.PipeReader.ReadAtLeastAsyncCore(Int32 minimumSize, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.PipeReadBufferState.ReadAsync(PipeReader utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-10-01 23:28:36.096 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - 400 0 null 30994.6729ms
+2026-10-01 23:29:43.791 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - null null
+2026-10-01 23:29:43.808 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:29:43.809 +05:30 [INF] HTTP OPTIONS /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 204 in 1.1255 ms
+2026-10-01 23:29:43.822 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 204 null null 30.5075ms
+2026-10-01 23:29:43.862 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - application/json 26887
+2026-10-01 23:29:43.882 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:29:43.896 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:29:43.903 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:29:43.905 +05:30 [INF] HTTP PUT /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 401 in 23.8777 ms
+2026-10-01 23:29:43.910 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 401 0 null 48.5215ms
+2026-10-01 23:29:45.617 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - null null
+2026-10-01 23:29:45.640 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:29:45.642 +05:30 [INF] HTTP OPTIONS /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 204 in 2.3319 ms
+2026-10-01 23:29:45.657 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 204 null null 39.7782ms
+2026-10-01 23:29:45.723 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - application/json 26887
+2026-10-01 23:29:45.728 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:29:45.745 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:29:45.752 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:29:45.755 +05:30 [INF] HTTP PUT /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 401 in 27.6352 ms
+2026-10-01 23:29:45.758 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 401 0 null 34.4565ms
+2026-10-01 23:29:46.877 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - null null
+2026-10-01 23:29:46.893 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:29:46.920 +05:30 [INF] HTTP OPTIONS /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 204 in 26.7471 ms
+2026-10-01 23:29:46.923 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 204 null null 46.1317ms
+2026-10-01 23:29:47.044 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - application/json 26887
+2026-10-01 23:29:47.054 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:29:47.056 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:29:47.060 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:29:47.063 +05:30 [INF] HTTP PUT /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 401 in 9.1672 ms
+2026-10-01 23:29:47.087 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 401 0 null 42.5217ms
+2026-10-01 23:34:44.241 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - null null
+2026-10-01 23:34:44.471 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:34:44.563 +05:30 [INF] HTTP OPTIONS /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 204 in 94.1033 ms
+2026-10-01 23:34:44.627 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 204 null null 387.8263ms
+2026-10-01 23:34:44.758 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - application/json 26887
+2026-10-01 23:34:44.851 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:34:45.004 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:34:45.167 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:34:45.342 +05:30 [INF] HTTP PUT /api/v1/products/6abe9e3ecc72461c413ff5b3 responded 401 in 490.3156 ms
+2026-10-01 23:34:45.578 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abe9e3ecc72461c413ff5b3 - 401 0 null 820.1218ms
+2026-10-01 23:36:17.754 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - null null
+2026-10-01 23:36:17.768 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:17.771 +05:30 [INF] HTTP OPTIONS /api/v1/products/6abea10fa4929a51460b0f60 responded 204 in 3.3794 ms
+2026-10-01 23:36:17.786 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 204 null null 31.4368ms
+2026-10-01 23:36:17.802 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:17.813 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:17.816 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:17.819 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:17.822 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 8.9777 ms
+2026-10-01 23:36:17.831 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 28.8365ms
+2026-10-01 23:36:19.085 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:19.095 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:19.098 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:19.100 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:19.103 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 7.7797 ms
+2026-10-01 23:36:19.110 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 24.7144ms
+2026-10-01 23:36:19.301 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:19.310 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:19.312 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:19.315 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:19.317 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 7.7641 ms
+2026-10-01 23:36:19.322 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 20.5949ms
+2026-10-01 23:36:19.493 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:19.500 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:19.504 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:19.512 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:19.515 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 16.1245 ms
+2026-10-01 23:36:19.519 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 26.3859ms
+2026-10-01 23:36:19.672 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:19.679 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:19.682 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:19.684 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:19.687 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 7.0508 ms
+2026-10-01 23:36:19.692 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 20.2386ms
+2026-10-01 23:36:19.857 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:19.870 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:19.877 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:19.882 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:19.886 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 16.1699 ms
+2026-10-01 23:36:19.899 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 41.4523ms
+2026-10-01 23:36:20.038 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:20.048 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:20.051 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:20.054 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:20.057 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 9.6737 ms
+2026-10-01 23:36:20.063 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 25.1413ms
+2026-10-01 23:36:20.227 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:20.235 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:20.238 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:20.243 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:20.247 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 11.9154 ms
+2026-10-01 23:36:20.252 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 25.353ms
+2026-10-01 23:36:20.398 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:20.407 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:20.411 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:20.414 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:20.417 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 10.1876 ms
+2026-10-01 23:36:20.426 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 27.2797ms
+2026-10-01 23:36:20.614 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - application/json 27506
+2026-10-01 23:36:20.620 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:20.624 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:20.628 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:20.631 +05:30 [INF] HTTP PUT /api/v1/products/6abea10fa4929a51460b0f60 responded 401 in 10.6165 ms
+2026-10-01 23:36:20.635 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5000/api/v1/products/6abea10fa4929a51460b0f60 - 401 0 null 21.5336ms
+2026-10-01 23:36:24.034 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-01 23:36:24.082 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:24.088 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:24.090 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:24.093 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 11.3908 ms
+2026-10-01 23:36:24.097 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 63.1333ms
+2026-10-01 23:36:36.396 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-01 23:36:36.404 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:36.406 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:36.409 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:36.413 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 8.4676 ms
+2026-10-01 23:36:36.417 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 20.9516ms
+2026-10-01 23:36:56.640 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-01 23:36:56.646 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:36:56.649 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:36:56.651 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:36:56.654 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 7.3786 ms
+2026-10-01 23:36:56.662 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 22.3023ms
+2026-10-01 23:37:30.351 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-01 23:37:30.371 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:37:30.373 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:37:30.380 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:37:30.383 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 12.7942 ms
+2026-10-01 23:37:30.389 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 38.3358ms
+2026-10-01 23:37:33.450 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-01 23:37:33.467 +05:30 [INF] CORS policy execution successful.
+2026-10-01 23:37:33.469 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-01 23:37:33.472 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 23:37:33.475 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 8.5224 ms
+2026-10-01 23:37:33.480 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 30.3804ms
+2026-10-01 23:42:53.833 +05:30 [INF] Application is shutting down...
+2026-10-01 23:43:29.237 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-01 23:43:29.379 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 23:43:29.524 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-01 23:43:29.588 +05:30 [INF] Now listening on: http://[::]:5000
+2026-10-01 23:43:29.593 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 23:43:29.595 +05:30 [INF] Hosting environment: Production
+2026-10-01 23:43:29.596 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-01 23:45:48.745 +05:30 [INF] Application is shutting down...
+2026-10-01 23:46:17.166 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-01 23:46:17.281 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 23:46:17.378 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-01 23:46:17.440 +05:30 [INF] Now listening on: http://[::]:5000
+2026-10-01 23:46:17.446 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 23:46:17.452 +05:30 [INF] Hosting environment: Production
+2026-10-01 23:46:17.454 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api

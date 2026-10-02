@@ -6,7 +6,7 @@ using System.Text;
 
 // Render injects a PORT env var at runtime. Override Kestrel's URL so the
 // container actually listens on that port regardless of appsettings.json.
-var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 Environment.SetEnvironmentVariable("ASPNETCORE_URLS", $"http://+:{port}");
 
 var builder = WebApplication.CreateBuilder(args);

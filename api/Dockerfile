@@ -33,7 +33,7 @@ RUN mkdir -p logs
 COPY --from=build /app/publish .
 
 # Render injects PORT env var; ASP.NET Core reads ASPNETCORE_URLS
-ENV ASPNETCORE_URLS=http://+:10000
-EXPOSE 10000
+ENV ASPNETCORE_URLS=http://+:5000
+EXPOSE 5000
 
 ENTRYPOINT ["dotnet", "ZahSellerAI.API.dll"]

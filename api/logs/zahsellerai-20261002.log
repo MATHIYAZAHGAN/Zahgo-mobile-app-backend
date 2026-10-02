@@ -1,0 +1,444 @@
+2026-10-02 00:16:25.051 +05:30 [INF] Application is shutting down...
+2026-10-02 00:16:34.153 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-02 00:16:34.224 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-02 00:16:34.284 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-02 00:16:34.326 +05:30 [INF] Now listening on: http://[::]:5000
+2026-10-02 00:16:34.330 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-02 00:16:34.331 +05:30 [INF] Hosting environment: Production
+2026-10-02 00:16:34.332 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-02 00:19:17.398 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - null null
+2026-10-02 00:19:17.485 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:17.494 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 11.4885 ms
+2026-10-02 00:19:17.507 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - 204 null null 110.0307ms
+2026-10-02 00:19:17.515 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/login - application/json 67
+2026-10-02 00:19:17.525 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:17.583 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API)'
+2026-10-02 00:19:17.616 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ZahSellerAI.Application.DTOs.LoginRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-02 00:19:47.357 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 00:19:47.360 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 00:19:47.364 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:47.365 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:47.366 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 2.9217 ms
+2026-10-02 00:19:47.366 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 0.8594 ms
+2026-10-02 00:19:47.368 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 10.6237ms
+2026-10-02 00:19:47.370 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 9.3504ms
+2026-10-02 00:19:47.373 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 00:19:47.382 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:47.411 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:19:47.423 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:19:47.435 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-02 00:19:47.449 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-02 00:19:47.450 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 67.9150 ms
+2026-10-02 00:19:47.454 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 81.0023ms
+2026-10-02 00:19:47.458 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 00:19:47.459 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - null null
+2026-10-02 00:19:47.468 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:47.471 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:47.473 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 2.0725 ms
+2026-10-02 00:19:47.475 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:19:47.476 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - 204 null null 17.4101ms
+2026-10-02 00:19:47.484 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:19:47.488 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - application/json 46
+2026-10-02 00:19:47.493 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-02 00:19:47.497 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:19:47.500 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-02 00:19:47.501 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:19:47.502 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 34.5792 ms
+2026-10-02 00:19:47.506 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:19:47.509 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 50.6272ms
+2026-10-02 00:19:47.514 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-02 00:19:47.536 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(ZahSellerAI.Application.DTOs.RefreshTokenRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-02 00:19:48.116 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API) in 30488.0052ms
+2026-10-02 00:19:48.119 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API)'
+2026-10-02 00:19:48.121 +05:30 [ERR] HTTP POST /api/v1/auth/login responded 500 in 30596.1213 ms
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.PipeReader.ReadAtLeastAsyncCore(Int32 minimumSize, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.PipeReadBufferState.ReadAsync(PipeReader utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-10-02 00:19:48.150 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/auth/login - 400 0 null 30635.4768ms
+2026-10-02 00:20:48.384 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.LoginResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 00:20:48.412 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API) in 60872.718ms
+2026-10-02 00:20:48.414 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-02 00:20:48.416 +05:30 [INF] HTTP POST /api/v1/auth/refresh responded 200 in 60919.1546 ms
+2026-10-02 00:20:48.418 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - 499 null application/json; charset=utf-8 60929.8134ms
+2026-10-02 00:22:48.416 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - null null
+2026-10-02 00:22:48.422 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:22:48.423 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 1.9146 ms
+2026-10-02 00:22:48.426 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - 204 null null 11.0237ms
+2026-10-02 00:22:48.434 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/login - application/json 67
+2026-10-02 00:22:48.439 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:22:48.441 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API)'
+2026-10-02 00:22:48.444 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ZahSellerAI.Application.DTOs.LoginRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-02 00:23:11.711 +05:30 [INF] Application is shutting down...
+2026-10-02 00:23:28.929 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-02 00:23:29.074 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-02 00:23:29.186 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-02 00:23:29.238 +05:30 [INF] Now listening on: http://[::]:5000
+2026-10-02 00:23:29.241 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-02 00:23:29.243 +05:30 [INF] Hosting environment: Production
+2026-10-02 00:23:29.244 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-02 00:39:40.680 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 00:39:40.680 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 00:39:40.881 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:39:40.881 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:39:40.890 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 14.0449 ms
+2026-10-02 00:39:40.890 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 14.0618 ms
+2026-10-02 00:39:40.909 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 237.5599ms
+2026-10-02 00:39:40.909 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 237.5602ms
+2026-10-02 00:39:40.924 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 00:39:40.957 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:39:41.072 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:39:41.107 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:39:41.126 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-02 00:39:41.136 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-02 00:39:41.138 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 182.7975 ms
+2026-10-02 00:39:41.143 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 219.2823ms
+2026-10-02 00:39:41.154 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 00:39:41.155 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - null null
+2026-10-02 00:39:41.160 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:39:41.163 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:39:41.203 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 39.7588 ms
+2026-10-02 00:39:41.209 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:39:41.218 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - 204 null null 63.8109ms
+2026-10-02 00:39:41.244 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:39:41.261 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - application/json 46
+2026-10-02 00:39:41.269 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-02 00:39:41.272 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:39:41.274 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-02 00:39:41.278 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 117.2175 ms
+2026-10-02 00:39:41.278 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:39:41.285 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 130.304ms
+2026-10-02 00:39:41.292 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:39:41.319 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-02 00:39:41.399 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(ZahSellerAI.Application.DTOs.RefreshTokenRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-02 00:40:11.991 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API) in 30583.6256ms
+2026-10-02 00:40:11.994 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-02 00:40:11.995 +05:30 [ERR] HTTP POST /api/v1/auth/refresh responded 500 in 30723.2522 ms
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.PipeReader.ReadAtLeastAsyncCore(Int32 minimumSize, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.PipeReadBufferState.ReadAsync(PipeReader utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-10-02 00:40:12.015 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - 400 0 null 30753.5664ms
+2026-10-02 00:41:09.670 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - null null
+2026-10-02 00:41:09.673 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:09.674 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 1.6262 ms
+2026-10-02 00:41:09.676 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - 204 null null 5.886ms
+2026-10-02 00:41:09.680 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/login - application/json 67
+2026-10-02 00:41:09.684 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:09.686 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API)'
+2026-10-02 00:41:09.704 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ZahSellerAI.Application.DTOs.LoginRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-02 00:41:39.715 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 00:41:39.717 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 00:41:39.718 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:39.721 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:39.722 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 3.7595 ms
+2026-10-02 00:41:39.723 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 2.4381 ms
+2026-10-02 00:41:39.725 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 10.4195ms
+2026-10-02 00:41:39.727 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 10.0354ms
+2026-10-02 00:41:39.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 00:41:39.737 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:39.739 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:41:39.742 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:41:39.751 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-02 00:41:39.754 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-02 00:41:39.756 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 18.9025 ms
+2026-10-02 00:41:39.759 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 27.8041ms
+2026-10-02 00:41:39.765 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 00:41:39.766 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - null null
+2026-10-02 00:41:39.769 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:39.772 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:39.773 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:41:39.774 +05:30 [INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 2.2499 ms
+2026-10-02 00:41:39.778 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:41:39.780 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/refresh - 204 null null 14.216ms
+2026-10-02 00:41:39.782 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-10-02 00:41:39.786 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - application/json 46
+2026-10-02 00:41:39.787 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-02 00:41:39.791 +05:30 [INF] CORS policy execution successful.
+2026-10-02 00:41:39.793 +05:30 [INF] HTTP GET /api/v1/products responded 401 in 24.3610 ms
+2026-10-02 00:41:39.794 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2026-10-02 00:41:39.797 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 401 0 null 31.7662ms
+2026-10-02 00:41:39.801 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-10-02 00:41:39.808 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-02 00:41:39.810 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RefreshToken(ZahSellerAI.Application.DTOs.RefreshTokenRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-02 00:42:10.019 +05:30 [INF] Seller logged in: mathimathiyazahgan@gmail.com
+2026-10-02 00:42:10.029 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.LoginResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 00:42:10.058 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API) in 60351.1594ms
+2026-10-02 00:42:10.062 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API)'
+2026-10-02 00:42:10.064 +05:30 [INF] HTTP POST /api/v1/auth/login responded 200 in 60380.4162 ms
+2026-10-02 00:42:10.067 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/auth/login - 499 null application/json; charset=utf-8 60387.0421ms
+2026-10-02 00:42:39.921 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.LoginResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 00:42:39.923 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API) in 60109.7925ms
+2026-10-02 00:42:39.924 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AuthController.RefreshToken (ZahSellerAI.API)'
+2026-10-02 00:42:39.925 +05:30 [INF] HTTP POST /api/v1/auth/refresh responded 200 in 60133.8643 ms
+2026-10-02 00:42:39.927 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/auth/refresh - 499 null application/json; charset=utf-8 60140.7547ms
+2026-10-02 22:22:32.529 +05:30 [INF] Application is shutting down...
+2026-10-02 22:28:54.858 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-02 22:28:54.927 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-02 22:28:54.983 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-02 22:28:55.017 +05:30 [INF] Now listening on: http://[::]:5000
+2026-10-02 22:28:55.020 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-02 22:28:55.021 +05:30 [INF] Hosting environment: Production
+2026-10-02 22:28:55.022 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-02 22:35:39.877 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - null null
+2026-10-02 22:35:40.128 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:35:40.136 +05:30 [INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 11.5332 ms
+2026-10-02 22:35:40.150 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/auth/login - 204 null null 291.3452ms
+2026-10-02 22:35:40.163 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth/login - application/json 67
+2026-10-02 22:35:40.179 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:35:40.264 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API)'
+2026-10-02 22:35:40.338 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ZahSellerAI.Application.DTOs.LoginRequest) on controller ZahSellerAI.API.Controllers.AuthController (ZahSellerAI.API).
+2026-10-02 22:35:41.763 +05:30 [INF] Seller logged in: mathimathiyazahgan@gmail.com
+2026-10-02 22:35:41.779 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.LoginResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:35:41.864 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API) in 1513.1102ms
+2026-10-02 22:35:41.874 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AuthController.Login (ZahSellerAI.API)'
+2026-10-02 22:35:41.881 +05:30 [INF] HTTP POST /api/v1/auth/login responded 200 in 1703.4030 ms
+2026-10-02 22:35:41.888 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/v1/auth/login - 200 null application/json; charset=utf-8 1725.1906ms
+2026-10-02 22:35:41.941 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:35:41.947 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:35:41.953 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:35:41.954 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:35:41.956 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 3.8884 ms
+2026-10-02 22:35:41.957 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 2.9865 ms
+2026-10-02 22:35:41.961 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 20.076ms
+2026-10-02 22:35:41.965 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 17.9537ms
+2026-10-02 22:35:41.972 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:35:41.993 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:35:42.159 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:35:42.187 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:35:42.305 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:35:42.349 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 155.1802ms
+2026-10-02 22:35:42.350 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:35:42.352 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:35:42.358 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:35:42.363 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 370.3959 ms
+2026-10-02 22:35:42.372 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 399.858ms
+2026-10-02 22:35:42.383 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:35:42.388 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:35:42.414 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:35:42.419 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 26.4886ms
+2026-10-02 22:35:42.424 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:35:42.427 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 69.9221 ms
+2026-10-02 22:35:42.433 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 82.7609ms
+2026-10-02 22:41:01.286 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:41:01.286 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:41:01.314 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:41:01.314 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:41:01.317 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 3.7360 ms
+2026-10-02 22:41:01.319 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 5.7690 ms
+2026-10-02 22:41:01.326 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 45.2522ms
+2026-10-02 22:41:01.329 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 48.266ms
+2026-10-02 22:41:01.340 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:41:01.360 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:41:01.389 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:41:01.395 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:41:01.486 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:41:01.491 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 87.0194ms
+2026-10-02 22:41:01.497 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:41:01.497 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:41:01.504 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:41:01.507 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 147.0744 ms
+2026-10-02 22:41:01.513 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:41:01.515 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 174.4996ms
+2026-10-02 22:41:01.517 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:41:01.552 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:41:01.557 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 25.1207ms
+2026-10-02 22:41:01.562 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:41:01.565 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 61.1772 ms
+2026-10-02 22:41:01.569 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 72.0193ms
+2026-10-02 22:43:52.276 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:43:52.277 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:43:52.283 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:43:52.291 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 8.6837 ms
+2026-10-02 22:43:52.291 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:43:52.297 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 21.1192ms
+2026-10-02 22:43:52.299 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 7.6206 ms
+2026-10-02 22:43:52.307 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:43:52.311 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 33.1226ms
+2026-10-02 22:43:52.317 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:43:52.326 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:43:52.331 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:43:52.353 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:43:52.356 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 17.5895ms
+2026-10-02 22:43:52.358 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:43:52.361 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:43:52.370 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:43:52.373 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 55.2943 ms
+2026-10-02 22:43:52.375 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:43:52.380 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 72.6517ms
+2026-10-02 22:43:52.383 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:43:52.430 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:43:52.448 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 39.8787ms
+2026-10-02 22:43:52.461 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:43:52.470 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 100.6822 ms
+2026-10-02 22:43:52.478 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 119.1056ms
+2026-10-02 22:44:21.150 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:44:21.150 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - null null
+2026-10-02 22:44:21.172 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:44:21.176 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:44:21.177 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 5.7999 ms
+2026-10-02 22:44:21.179 +05:30 [INF] HTTP OPTIONS /api/v1/products responded 204 in 3.4747 ms
+2026-10-02 22:44:21.183 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 31.8594ms
+2026-10-02 22:44:21.185 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/v1/products - 204 null null 35.2907ms
+2026-10-02 22:44:21.193 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:44:21.204 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:44:21.208 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:44:21.211 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:44:21.229 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:44:21.235 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 20.0892ms
+2026-10-02 22:44:21.237 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/v1/products - null null
+2026-10-02 22:44:21.238 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:44:21.244 +05:30 [INF] CORS policy execution successful.
+2026-10-02 22:44:21.246 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 41.7061 ms
+2026-10-02 22:44:21.249 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:44:21.251 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 57.925ms
+2026-10-02 22:44:21.254 +05:30 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts(Int32, Int32, System.Nullable`1[ZahSellerAI.Domain.Enums.ProductStatus], System.String) on controller ZahSellerAI.API.Controllers.ProductsController (ZahSellerAI.API).
+2026-10-02 22:44:21.276 +05:30 [INF] Executing OkObjectResult, writing value of type 'ZahSellerAI.Shared.DTOs.ApiResponse`1[[ZahSellerAI.Application.DTOs.ProductListResponse, ZahSellerAI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-02 22:44:21.279 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API) in 17.069ms
+2026-10-02 22:44:21.283 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.ProductsController.GetProducts (ZahSellerAI.API)'
+2026-10-02 22:44:21.286 +05:30 [INF] HTTP GET /api/v1/products responded 200 in 41.5965 ms
+2026-10-02 22:44:21.289 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/v1/products - 200 null application/json; charset=utf-8 51.945ms
+2026-10-02 23:32:25.640 +05:30 [INF] Application is shutting down...
+2026-10-02 23:32:35.271 +05:30 [INF] Starting ZAH Seller AI API
+2026-10-02 23:32:35.437 +05:30 [INF] User profile is available. Using 'C:\Users\Mathi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-02 23:32:35.540 +05:30 [WRN] The WebRootPath was not found: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api\wwwroot. Static files may be unavailable.
+2026-10-02 23:32:35.590 +05:30 [INF] Now listening on: http://[::]:5000
+2026-10-02 23:32:35.592 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-02 23:32:35.593 +05:30 [INF] Hosting environment: Production
+2026-10-02 23:32:35.594 +05:30 [INF] Content root path: C:\Users\Mathi\Desktop\zah_mobile_app\zah_mobile_backend\services\api
+2026-10-02 23:53:04.946 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://10.238.251.96:5000/api/v1/products/ai/transcribe-audio - null null
+2026-10-02 23:53:05.214 +05:30 [INF] CORS policy execution successful.
+2026-10-02 23:53:05.239 +05:30 [INF] HTTP OPTIONS /api/v1/products/ai/transcribe-audio responded 204 in 28.1571 ms
+2026-10-02 23:53:05.283 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://10.238.251.96:5000/api/v1/products/ai/transcribe-audio - 204 null null 349.1253ms
+2026-10-02 23:53:05.310 +05:30 [INF] Request starting HTTP/1.1 POST http://10.238.251.96:5000/api/v1/products/ai/transcribe-audio - application/json 11570
+2026-10-02 23:53:05.329 +05:30 [INF] CORS policy execution successful.
+2026-10-02 23:53:05.453 +05:30 [INF] Executing endpoint 'ZahSellerAI.API.Controllers.AIProductController.TranscribeAudio (ZahSellerAI.API)'
+2026-10-02 23:53:05.541 +05:30 [INF] Route matched with {action = "TranscribeAudio", controller = "AIProduct"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] TranscribeAudio(ZahSellerAI.API.Controllers.AudioTranscriptionRequest) on controller ZahSellerAI.API.Controllers.AIProductController (ZahSellerAI.API).
+2026-10-02 23:53:06.748 +05:30 [INF] 🎙️ Received mobile microphone audio recording for transcription (11528 chars)
+2026-10-02 23:53:07.794 +05:30 [INF] Using smart Tamil speech fallback engine for recorded audio
+2026-10-02 23:53:07.809 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType11`4[[System.Boolean, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-10-02 23:53:07.833 +05:30 [INF] Executed action ZahSellerAI.API.Controllers.AIProductController.TranscribeAudio (ZahSellerAI.API) in 2278.815ms
+2026-10-02 23:53:07.837 +05:30 [INF] Executed endpoint 'ZahSellerAI.API.Controllers.AIProductController.TranscribeAudio (ZahSellerAI.API)'
+2026-10-02 23:53:07.844 +05:30 [INF] HTTP POST /api/v1/products/ai/transcribe-audio responded 200 in 2516.3345 ms
+2026-10-02 23:53:07.850 +05:30 [INF] Request finished HTTP/1.1 POST http://10.238.251.96:5000/api/v1/products/ai/transcribe-audio - 200 null application/json; charset=utf-8 2540.2574ms
